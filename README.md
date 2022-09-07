@@ -1,3 +1,45 @@
+# Triptagram is an upload pictures  created on ReactJS with:
+
+- Styled Components
+- Firebase
+  -firestore
+  -storgage
+- Custom Hooks
+- React Router
+
+## intall Project
+### Versions used:
+npm: 8.18.0
+node: 18.8.0
+firebase: 9.9.4   
+react: 18.2.0
+react-dom: 18.2.0
+react-scripts: 5.0.1
+styled-components: 5.3.5
+
+To install project run 
+### `npm install`
+
+Create  a [Firebase](https://firebase.google.com/) app 
+
+- Logged with your google account  go to `console`
+- Add Project
+- Enter Project Name > `Continue`
+- Disable Google Analitycs (at least you need it) > `Create Project` 
+- Register new Web App. Click opn the `</>` icon
+- Enter App nickname  and click `Register App`
+- with the info given create an env.development.local file on project root with the following  format:
+
+```
+REACT_APP_APIKEY= given apiKey
+REACT_APP_AUTHDOMAIN=given authDomain
+REACT_APP_PROJECTID= given projectId
+REACT_APP_STORAGEBUCKET=given StorageBucket
+REACT_APP_MESSAGINGSENDERID=given messagingSenderId
+REACT_APP_APPID=1:301573535761: giv3en appId
+```
+and run `npm start`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

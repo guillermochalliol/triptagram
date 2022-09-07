@@ -5,14 +5,14 @@ import 'firebase/compat/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyC3GfQ36CB3Q51ASGAIVNLhMxQvFVlvb9o",
-    authDomain: "triptagram.firebaseapp.com",
-    projectId: "triptagram",
-    storageBucket: "triptagram.appspot.com",
-    messagingSenderId: "301573535761",
-    appId: "1:301573535761:web:99f0ce82ede0464c8699b0"
+    apiKey: process.env.REACT_APP_APIKEY,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN,
+    projectId: process.env.REACT_APP_PROJECTID,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+    appId: process.env.REACT_APP_APPID
 };
-
+console.log('hola', process.env.REACT_APP_APIKEY)
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
