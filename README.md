@@ -3,7 +3,7 @@
 - Styled Components
 - Firebase
   - firestore
-  - storgage
+  - storage
 - Custom Hooks
 - React Router
 
@@ -20,7 +20,7 @@
 ### To install project run 
 `npm install`
 
-### Create  a [Firebase](https://firebase.google.com/) app 
+## Create  a [Firebase](https://firebase.google.com/) app 
 
 - Logged with your google account  go to `console`
 - Add Project
@@ -28,7 +28,7 @@
 - Disable Google Analitycs (at least you need it) > `Create Project` 
 - Register new Web App. Click opn the `</>` icon
 - Enter App nickname  and click `Register App`
-- with the info given create an env.development.local file on project root with the following  format:
+- with the info given create an **env.development.local** file on project root with the following  format:
 
 ```
 REACT_APP_APIKEY= given apiKey
