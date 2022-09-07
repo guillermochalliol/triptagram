@@ -1,26 +1,26 @@
-# Triptagram is an upload pictures  created on ReactJS with:
+# Triptagram is an upload pictures project created on ReactJS with:
 
 - Styled Components
 - Firebase
-  -firestore
-  -storgage
+  - firestore
+  - storgage
 - Custom Hooks
 - React Router
 
-## intall Project
+## Install Project
 ### Versions used:
-npm: 8.18.0
-node: 18.8.0
-firebase: 9.9.4   
-react: 18.2.0
-react-dom: 18.2.0
-react-scripts: 5.0.1
-styled-components: 5.3.5
+- npm: 8.18.0
+- node: 18.8.0
+- firebase: 9.9.4   
+- react: 18.2.0
+- react-dom: 18.2.0
+- react-scripts: 5.0.1
+- styled-components: 5.3.5
 
-To install project run 
-### `npm install`
+### To install project run 
+`npm install`
 
-Create  a [Firebase](https://firebase.google.com/) app 
+### Create  a [Firebase](https://firebase.google.com/) app 
 
 - Logged with your google account  go to `console`
 - Add Project
