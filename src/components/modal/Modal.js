@@ -1,5 +1,5 @@
 import React from 'react';
-import { BACKDROP } from './style';
+import './style.css';
 
 const Modal = ({ setSelectedImg, selectedImg }) => {
 
@@ -10,9 +10,9 @@ const Modal = ({ setSelectedImg, selectedImg }) => {
     }
 
     return (
-        <BACKDROP onClick={handleClick} id="backdrop">
+        <div class="backdrop" onClick={handleClick} id="backdrop">
             <img src={selectedImg} alt="enlarged pic"/>
-        </BACKDROP>
+        </div>
     )
 }
 

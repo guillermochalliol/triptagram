@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
-import Header from './components/header/Header';
-import ImageGrid from './components/imagegrid/ImageGrid';
-import UploadForm from './components/uploadform/UploadForm';
-import { GlobalStyles } from "./styles/Global";
-import Modal from './components/modal/Modal';
+import React from 'react';
+
+
+import { Routes, Route } from "react-router-dom";
+import { UserAuthContextProvider } from "./context/UserAuthContext";
+
+import Home from "./components/home/Home";
+import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 function App() {
-  const [selectedImg, setSelectedImg] = useState(null);
   return (
     <div className="app">
-    <GlobalStyles />
-    <Header />
-    <UploadForm/>
-    <ImageGrid setSelectedImg={setSelectedImg} />
-    {selectedImg && (
-      <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-    )}
+      <div className="container">
+        <div className="row">
+          <div>
+            <UserAuthContextProvider>
+              <Routes>
+                <Route path="/home" 
+                element={
+                  <ProtectedRoute >
+                    <Home />
+                  </ProtectedRoute> 
+                }/>
+                <Route path="/" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+              </Routes>
+            </UserAuthContextProvider>
+          </div>
+        </div >
+      </div >
     </div>
   );
 }

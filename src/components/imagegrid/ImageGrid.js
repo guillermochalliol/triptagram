@@ -1,17 +1,17 @@
 import React from 'react';
 import useFirestore from '../../hooks/useFirestore';
-import { GRID, WRAP } from './style';
+import './style.css';
 
 const ImageGrid = ({ setSelectedImg }) => {
 const { docs } = useFirestore('images')
     return(
-        <GRID>
+        <div className="grid">
             {docs && docs.map(doc => (
-                <WRAP key={doc.id} onClick={() => setSelectedImg(doc.url)}>
+                <div className="wrap" key={doc.id} onClick={() => setSelectedImg(doc.url)}>
                     <img src={doc.url} alt="uploade img"/>
-                </WRAP>
+                </div>
             ))}
-        </GRID>
+        </div>
     )
 }
 
