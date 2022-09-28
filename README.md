@@ -1,11 +1,12 @@
 # Triptagram is an upload pictures project created on ReactJS with:
 
-- Styled Components
+- Tailwind
 - Firebase
   - firestore
   - storage
 - Custom Hooks
 - React Router
+- React Hook Form
 
 ## Install Project
 ### Versions used:
@@ -15,7 +16,11 @@
 - react: 18.2.0
 - react-dom: 18.2.0
 - react-scripts: 5.0.1
-- styled-components: 5.3.5
+- react-hook-form: 7.36.1
+- react-router-dom: 6.4.0
+- postcss: 8.4.16
+- postcss-cli: 10.0.0
+- tailwindcss": 3.1.8
 
 ### To install project run 
 `npm install`
@@ -28,6 +33,7 @@
 - Disable Google Analitycs (at least you need it) > `Create Project` 
 - Register new Web App. Click opn the `</>` icon
 - Enter App nickname  and click `Register App`
+- You need add Authentication  with MAil/password, Google and Github Auth methods
 - with the info given create an **env.development.local** file on project root with the following  format:
 
 ```
@@ -36,7 +42,7 @@ REACT_APP_AUTHDOMAIN=given authDomain
 REACT_APP_PROJECTID= given projectId
 REACT_APP_STORAGEBUCKET=given StorageBucket
 REACT_APP_MESSAGINGSENDERID=given messagingSenderId
-REACT_APP_APPID=1:301573535761: giv3en appId
+REACT_APP_APPID=1:301573535761: given appId
 ```
 and run `npm start`
 
@@ -81,6 +87,14 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+
+### For Tailwind we use PostCSS to compile 
+
+you can run  
+### `npm run build:css`
+this command  build the css  once, or  for developing you can run :
+### `npm run watch:css`
+in case you want to build the css everytime you save a file
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
