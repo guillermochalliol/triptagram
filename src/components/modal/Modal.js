@@ -1,20 +1,21 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import './style.css';
 
-const Modal = ({ setSelectedImg, selectedImg }) => {
-
-    const handleClick = (e) => {
-        if (e.target.id === 'backdrop') {
-            setSelectedImg(null);
-        }
+const Modal = ({ children }) => {
+    const elRef = useRef(null);
+    if (!elRef.current) {
+        elRef.current = document.createElement("div");
     }
 
-    return (
-        <div class="backdrop" onClick={handleClick} id="backdrop">
-            <img src={selectedImg} alt="enlarged pic"/>
-        </div>
-    )
-}
+    useEffect(() => {
+        const modalRoot = document.getElementById("modal");
+        modalRoot.appendChild(elRef.current);
+        return () => modalRoot.removeChild(elRef.current);
+    }, []);
+
+    return createPortal(<div>{children}</div>, elRef.current);
+};
 
 export default Modal;
 

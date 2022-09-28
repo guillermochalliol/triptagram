@@ -8,14 +8,16 @@ const progressbar = {
     marginTop: '20px',
 }
 
-const ProgressBar = ({ file, setFile }) => {
+const ProgressBar = ({ file, setFile, setShowModal,setSubmit, title, description, userId }) => {
 
-    const { progress, url } = useStorage(file);
+    const { progress, url } = useStorage(file, title, description, userId);
     useEffect(() => {
         if (url) {
             setFile(null);
+            setShowModal(false);
+            setSubmit(false);
         }
-    }, [url, setFile]);
+    }, [url, setFile, setShowModal, setSubmit]);
 
     return (
         <div style={{...progressbar, width: progress+'%'} }></div>
