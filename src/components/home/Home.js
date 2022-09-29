@@ -37,7 +37,7 @@ const Home = () => {
                         </>
                         }
                         </div>
-                        <div className="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between">
+                    <div className="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex grid grid-cols-3 ">
                             <div className="text-center">
                                 <h6 className="text-lg font-semibold text-gray-700 dark:text-white">Collaborate with me</h6>
                                 <p className="mt-2 text-gray-500">Send me money</p>
