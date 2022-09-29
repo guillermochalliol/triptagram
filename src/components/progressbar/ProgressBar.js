@@ -1,13 +1,6 @@
 import React, { useEffect } from 'react';
 import useStorage from '../../hooks/useStorage';
 
-
-const progressbar = {
-    height: '5px',
-    background: '#efb6b2',
-    marginTop: '20px',
-}
-
 const ProgressBar = ({ file, setFile, setShowModal,setSubmit, title, description, userId }) => {
 
     const { progress, url } = useStorage(file, title, description, userId);
@@ -20,7 +13,9 @@ const ProgressBar = ({ file, setFile, setShowModal,setSubmit, title, description
     }, [url, setFile, setShowModal, setSubmit]);
 
     return (
-        <div style={{...progressbar, width: progress+'%'} }></div>
+        <div className="w-full bg-gray-200 rounded-full">
+            <div className="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-l-full" style={{ width: progress + '%' }}> {progress.toFixed(0)+'%'}</div>
+        </div>
     )
 };
 

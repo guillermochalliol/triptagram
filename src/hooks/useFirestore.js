@@ -4,7 +4,6 @@ import { appFirestore } from "../firebase/config";
 
 const useFirestore = (collection, userId) => {
     const [docs, setDocs] = useState([]);
-console.log(userId)
     useEffect(() => {
         const unsub = appFirestore.collection(collection);
         unsub.where('userId', '==', userId || "")

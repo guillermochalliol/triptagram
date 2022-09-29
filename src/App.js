@@ -7,12 +7,10 @@ import { UserAuthContextProvider } from './context/UserAuthContext';
 function App() {
   return (
     <div className="app">
-      <div>
-        <UserAuthContextProvider>
-          <NavBar />
-        </UserAuthContextProvider>
-      </div>
-    </div >
+      <UserAuthContextProvider>
+        <NavBar />
+      </UserAuthContextProvider>
+    </div>
 
   );
 }
