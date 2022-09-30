@@ -100,8 +100,8 @@ function Login()  {
                         <div className="relative">
                             <input
                                 className="appearance-none border pl-12 border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline"
-                                id="username"
-                                type="text"
+                                id="email"
+                                type="email"
                                 placeholder="Email"
                                 onChange={(e) => setEmail(e.target.value)}
                             />
@@ -124,8 +124,8 @@ function Login()  {
                         <div className="relative mt-3">
                             <input
                                 className="appearance-none border pl-12 border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline"
-                                id="username"
-                                type="text"
+                                id="password"
+                                type="password"
                                 placeholder="Password"
                                 onChange={(e) => setPassword(e.target.value)}
                             />
@@ -162,7 +162,7 @@ function Login()  {
                         </div>}
                         <div className="flex items-center justify-center mt-8">
                             <button
-                                className="text-white py-2 px-4 uppercase rounded bg-indigo-500 hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"
+                                className="text-white py-2 px-4 uppercase rounded bg-primary hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"
                             >
                                 Sign in
                             </button>

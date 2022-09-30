@@ -130,7 +130,7 @@ function Signup() {
                                 </svg>
                             </div>
                         </div>
-                        {errors?.firstName?.type === "required" && <p>This field is required</p>}
+                        {errors?.firstName?.type === "required" && <p className="py-1 text-sm text-red-400 font-light">This field is required</p>}
                        
                         <div className="relative mt-3">
                             <input
@@ -154,7 +154,7 @@ function Signup() {
                                 </svg>
                             </div>
                         </div>
-                        {errors?.lastName?.type === "required" && <p>This field is required</p>}
+                        {errors?.lastName?.type === "required" && <p className="py-1 text-sm text-red-400 font-light">This field is required</p>}
                         <div className="relative  mt-3">
                             <input
                                 className="appearance-none border pl-12 border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline"
@@ -168,7 +168,7 @@ function Signup() {
                                         pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                                     })}
                             />
-                            {errors.email && <p>Please check the Email format</p>}
+                            {errors.email && <p className="py-1 text-sm text-red-400 font-light" >Please check the Email format</p>}
                             <div className="absolute left-0 inset-y-0 flex items-center">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -190,11 +190,11 @@ function Signup() {
                                 className="appearance-none border pl-12 border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline"
                                 id="password"
                                 name="password"
-                                type="text"
+                                type="password"
                                 placeholder="Password"
                                 {...register("password", {
                                     required: true,
-                                    minLength: 5
+                                    minLength: 6
                                 })}
                             />
                             <div className="absolute left-0 inset-y-0 flex items-center">
@@ -211,16 +211,16 @@ function Signup() {
                             </div>
                            
                         </div>
-                        {errors.password?.type === "required" && <p>This field is required</p>}
+                        {errors.password?.type === "required" && <p className="py-1 text-sm text-red-400 font-light">This field is required</p>}
                         {errors.password?.type === "minLength" && (
-                            <p>Password cannot less than 5 characters</p>
+                            <p className="py-1 text-sm text-red-400 font-light">Password cannot less than 6 characters</p>
                         )}
                         <div className="relative mt-3">
                             <input
                                 className="appearance-none border pl-12 border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline"
                                 id="password2"
                                 name="password2"
-                                type="text"
+                                type="password"
                                 placeholder="Confirm Password"
                                 {...register("password2", {
                                     required: true
@@ -242,7 +242,7 @@ function Signup() {
                         </div>
                         {watch("password2") !== watch("password") &&
                             getValues("password2") ? (
-                            <p>Passwords not match</p>
+                                <p className="py-1 text-sm text-red-400 font-light" >Passwords not match</p>
                         ) : null}
                         <div className="mt-4 flex items-center text-gray-500">
                             <input type="checkbox" id="remember" name="remember"  className="mr-3" 
